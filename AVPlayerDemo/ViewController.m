@@ -8,6 +8,16 @@
 
 #import "ViewController.h"
 #import<AVFoundation/AVFoundation.h>
+#import<MediaPlayer/MediaPlayer.h>
+
+
+typedef NS_ENUM(NSInteger, PanDirection){
+    
+    PanDirectionHorizontalMoved, // 横向移动
+    
+    PanDirectionVerticalMoved    // 纵向移动
+    
+};
 
 @interface ViewController ()
 
@@ -42,13 +52,19 @@
         //      增加下面这行可以解决iOS10兼容性问题了
         self.myPlayer.automaticallyWaitsToMinimizeStalling = NO;
     }
-    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(100, 200, 100, 100);
     button.backgroundColor = [UIColor redColor];
     [button setTitle:@"按钮" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(playAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button1.frame = CGRectMake(100, 300, 100, 100);
+    button1.backgroundColor = [UIColor blueColor];
+    [button1 setTitle:@"暂停" forState:UIControlStateNormal];
+    [button1 addTarget:self action:@selector(pasueAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
     
 //    [self.myPlayer play];
     //通过KVO来观察status属性的变化，来获得播放之前的错误信息
@@ -61,6 +77,10 @@
     }else{
         NSLog(@"视频正在加载中");
     }
+}
+
+- (void)pasueAction{
+    [self.myPlayer pause];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:
@@ -105,7 +125,7 @@
 
 - (UISlider *)avSlider{
     if (!_avSlider) {
-        _avSlider = [[UISlider alloc]initWithFrame:CGRectMake(0, 55, self.view.bounds.size.width, 30)];
+        _avSlider = [[UISlider alloc]initWithFrame:CGRectMake(0, 400, self.view.bounds.size.width, 30)];
         [self.view addSubview:_avSlider];
     }return _avSlider;
 }

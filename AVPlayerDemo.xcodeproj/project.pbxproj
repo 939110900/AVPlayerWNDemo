@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3464F5D0215B935C00FEFF24 /* WNAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3464F5CF215B935C00FEFF24 /* WNAVPlayerView.m */; };
 		3465FFBF2137E2CC00F3B62E /* WNAVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3465FFBE2137E2CC00F3B62E /* WNAVPlayerManager.m */; };
 		348353E621367771008643C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 348353E521367771008643C4 /* AppDelegate.m */; };
 		348353E921367771008643C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348353E821367771008643C4 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3464F5CE215B935C00FEFF24 /* WNAVPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNAVPlayerView.h; sourceTree = "<group>"; };
+		3464F5CF215B935C00FEFF24 /* WNAVPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNAVPlayerView.m; sourceTree = "<group>"; };
 		3465FFBD2137E2CC00F3B62E /* WNAVPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNAVPlayerManager.h; sourceTree = "<group>"; };
 		3465FFBE2137E2CC00F3B62E /* WNAVPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNAVPlayerManager.m; sourceTree = "<group>"; };
 		348353E121367771008643C4 /* AVPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +72,8 @@
 				348353E521367771008643C4 /* AppDelegate.m */,
 				348353E721367771008643C4 /* ViewController.h */,
 				348353E821367771008643C4 /* ViewController.m */,
+				3464F5CE215B935C00FEFF24 /* WNAVPlayerView.h */,
+				3464F5CF215B935C00FEFF24 /* WNAVPlayerView.m */,
 				348353EA21367771008643C4 /* Main.storyboard */,
 				348353ED21367771008643C4 /* Assets.xcassets */,
 				348353EF21367771008643C4 /* LaunchScreen.storyboard */,
@@ -159,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3464F5D0215B935C00FEFF24 /* WNAVPlayerView.m in Sources */,
 				348353E921367771008643C4 /* ViewController.m in Sources */,
 				348353F421367771008643C4 /* main.m in Sources */,
 				3465FFBF2137E2CC00F3B62E /* WNAVPlayerManager.m in Sources */,
